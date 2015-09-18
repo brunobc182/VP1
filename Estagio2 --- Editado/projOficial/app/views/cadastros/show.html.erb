@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= image_tag(@cadastro.picture_url, :width => 600) if @cadastro.picture.present? %>
+
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cadastro.Nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @cadastro.Descricao %>
+</p>
+
+<p>
+  <strong>Casa:</strong>
+  <%= @cadastro.Casa %>
+</p>
+
+<p>
+  <strong>Mascote:</strong>
+  <%= @cadastro.Mascote %>
+</p>
+
+<p>
+  <strong>Rival:</strong>
+  <%= @cadastro.Rival %>
+</p>
+
+<p>
+  <strong>Tecnico:</strong>
+  <%= @cadastro.Tecnico %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @cadastro.Cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @cadastro.Estado %>
+</p>
+
+<%= link_to 'Editar', edit_cadastro_path(@cadastro) %> |
+<%= link_to ' Voltar', cadastros_path %>

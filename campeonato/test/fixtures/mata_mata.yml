@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_camp: MyString
+  modalidade: MyString
+  competidores: 1
+
+two:
+  nome_camp: MyString
+  modalidade: MyString
+  competidores: 1

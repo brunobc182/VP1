@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nome: MyString
+  Descrição: MyText
+  Casa: MyString
+  Mascote: MyString
+  Rival: MyString
+  Tecnico: MyString
+  Cidade: MyString
+  Estado_id: 
+
+two:
+  Nome: MyString
+  Descrição: MyText
+  Casa: MyString
+  Mascote: MyString
+  Rival: MyString
+  Tecnico: MyString
+  Cidade: MyString
+  Estado_id: 

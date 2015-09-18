@@ -1,0 +1,54 @@
+<%= form_for(@mata_matum, :html => { :multipart => true }) do |f| %>
+  <% if @mata_matum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mata_matum.errors.count, "error") %> prohibited this mata_matum from being saved:</h2>
+
+      <ul>
+      <% @mata_matum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+ 
+      <%= f.label :imagem %><br>
+      <%= f.file_field :foto %><br>
+      <%= f.label :nome_do_campeonato %><br>
+      <%= f.text_field :nome_camp %><br><br>
+      <%= f.label :tipo_competidores %><br>
+   
+    
+    
+
+      <input type="radio" name="tipo_competidor" value="time" checked> Time
+      <br>
+      <input type="radio" name="tipo_competidor" value="jogador"> Jogador
+
+   <!--
+   <p>
+    <b>Country</b><br />
+    <input id="person_country_usa" name="person[country]" type="radio"
+value="USA" /> USA<br />
+    <input id="person_country_canada" name="person[country]" type="radio"
+value="Canada" /> Canada<br />
+    <input id="person_country_mexico" name="person[country]" type="radio"
+value="Mexico" /> Mexico<br />
+</p>
+  -->
+       
+  </div>
+  <div class="field">
+    <%= f.label :modalidade %><br>
+    <%= f.text_field :modalidade %>
+  </div>
+  <div class="field">
+    <%= f.label :competidores %><br>
+    <%= f.number_field :competidores %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Criar Mata-Mata" %>
+  </div>
+<% end %>

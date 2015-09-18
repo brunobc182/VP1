@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<%= image_tag(@mata_matum.foto_url, :width => 600) if @mata_matum.foto.present? %>
+</p>
+
+<p>
+  <strong>Nome do campeonato:</strong>
+  <%= @mata_matum.nome_camp %>
+</p>
+
+<p>
+  <strong>Modalidade:</strong>
+  <%= @mata_matum.modalidade %>
+</p>
+
+<p>
+  <strong>Competidores:</strong>
+  <%= @mata_matum.competidores %>
+</p>
+
+<p>
+  <strong>Tipo de Competidor:</strong>
+  
+</p>
+
+
+<%= link_to 'Editar', edit_mata_matum_path(@mata_matum) %> |
+<%= link_to 'Voltar', mata_mata_path %>

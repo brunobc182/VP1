@@ -1,0 +1,52 @@
+<%= form_for(@cadastro) do |f| %>
+  <% if @cadastro.errors.any? %>
+  <%= form_for(@cadastro, :html => { :multipart => true }) do |f| %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cadastro.errors.count, "error") %> prohibited this cadastro from being saved:</h2>
+
+      <ul>
+      <% @cadastro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% end %>
+<%= f.file_field :picture %>
+
+  <div class="field">
+    <%= f.label :Nome %><br>
+    <%= f.text_field :Nome %>
+  </div>
+  <div class="field">
+    <%= f.label :Descricao %><br>
+    <%= f.text_area :Descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :Casa %><br>
+    <%= f.text_field :Casa %>
+  </div>
+  <div class="field">
+    <%= f.label :Mascote %><br>
+    <%= f.text_field :Mascote %>
+  </div>
+  <div class="field">
+    <%= f.label :Rival %><br>
+    <%= f.text_field :Rival %>
+  </div>
+  <div class="field">
+    <%= f.label :Tecnico %><br>
+    <%= f.text_field :Tecnico %>
+  </div>
+  <div class="field">
+    <%= f.label :Cidade %><br>
+    <%= f.text_field :Cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :Estado %><br>
+    <%= f.text_field :Estado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

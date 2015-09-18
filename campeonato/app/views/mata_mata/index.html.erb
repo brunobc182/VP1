@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Mata-Mata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome do Campeonato</th>
+      <th>Modalidade</th>
+      <th>Competidores</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mata_mata.each do |mata_matum| %>
+      <tr>
+        <td><%= mata_matum.nome_camp %></td>
+        <td><%= mata_matum.modalidade %></td>
+        <td><%= mata_matum.competidores %></td>
+        
+        <td><%= link_to 'Mostrar', mata_matum %></td>
+        <td><%= link_to 'Editar', edit_mata_matum_path(mata_matum) %></td>
+        <td><%= link_to 'Excluir', mata_matum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Mata-Mata', new_mata_matum_path %>
+

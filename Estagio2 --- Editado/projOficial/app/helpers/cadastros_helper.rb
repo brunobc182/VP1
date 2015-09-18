@@ -1,0 +1,3 @@
+module CadastrosHelper
+
+end
